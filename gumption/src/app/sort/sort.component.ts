@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {SortOption} from '../models/sort-option';
+
 @Component({
   selector: 'app-sort',
   templateUrl: './sort.component.html',
@@ -7,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortComponent implements OnInit {
 
-  sortTypes: any;
-  sortOrder: any;
-  selectedSortType: any;
-  selectedSortOrder: any;
+  sortTypes: SortOption [];
+  sortOrder: SortOption [];
+  selectedSortType: SortOption;
+  selectedSortOrder: SortOption;
 
   constructor() { }
 
