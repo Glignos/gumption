@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
+import { Result } from '../models/result';
 
 @Component({
   selector: 'app-results',
@@ -7,7 +8,8 @@ import { ActivatedRoute} from '@angular/router';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  records: Object[] = [];
+  records: Result[];
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
