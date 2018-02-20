@@ -9,6 +9,9 @@
         <app-sort></app-sort>
       </div>
     </div>
+    <li *ngFor="let result of records" class="list-group list-group-item" >
+      <app-result [result]="result"></app-result>
+    </li>
 </div>
 <div>
   <li *ngFor="let record of records;" class="list-group list-group-item">
