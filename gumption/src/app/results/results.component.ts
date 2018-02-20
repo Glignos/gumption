@@ -21,7 +21,7 @@ export class ResultsComponent implements OnInit {
       this.route.data
       .map(data => data.query)
       .subscribe(json => {
-        this.records = (json['hits']['total']);
+        this.records = (json['hits']['hits']);
         this.facets = this.extractFacets(json);
       });
   }
