@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {SortOption} from '../models/sort-option';
+import {SortOption} from '../../models/sort-option';
 
 @Component({
   selector: 'app-sort',

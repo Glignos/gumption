@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
@@ -11,13 +12,16 @@ export class PaginationComponent implements OnInit {
   currentPage: number;
   pageSize: number;
 
-  constructor() { }
+  totalResults: number;
+  constructor(
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.totalRecords = 116;
-    this.currentPage = 1;
-    this.pageSize = 10;
-
+      this.route.data
+      .map(data => data.query)
+      .subscribe(json => {
+        this.totalResults = (json['hits']['total']);
+      });
   }
 
 }

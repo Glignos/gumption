@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-count',
@@ -6,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./count.component.css']
 })
 export class CountComponent implements OnInit {
-
   totalResults: number;
-
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.totalResults = 116;
+      this.route.data
+      .map(data => data.query)
+      .subscribe(json => {
+        this.totalResults = (json['hits']['total']);
+      });
   }
 
 }
