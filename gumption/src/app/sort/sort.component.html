@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-3">Sort by:</div>
+  <div class="col-md-9">
+    <ng-select [items]="sortOptions"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Select sort option"
+      [(ngModel)]="selectedSortOption">
+    </ng-select>
+  </div>
+</div>
