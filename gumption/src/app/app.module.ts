@@ -16,6 +16,7 @@ import { FacetsComponent } from './facets/facets.component';
 import { FacetComponent } from './facets/facet/facet.component';
 import { CountComponent } from './count/count.component';
 import { SortComponent } from './sort/sort.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SortComponent } from './sort/sort.component';
     FacetsComponent,
     FacetComponent,
     CountComponent,
-    SortComponent
+    SortComponent,
+    PaginationComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),

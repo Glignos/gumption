@@ -7,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortComponent implements OnInit {
 
-  sortOptions: any;
-  selectedSortOption: any;
+  sortTypes: any;
+  sortOrder: any;
+  selectedSortType: any;
+  selectedSortOrder: any;
 
   constructor() { }
 
   ngOnInit() {
-    this.sortOptions = [{name: 'Best match', id: 1}, {name: 'Asc', id:2 }];
+    this.sortTypes = [{name: 'Type 1', id: 1}, {name: 'Type 2', id:2 }];
+    this.sortOrder = [{name: 'Asc', id: 1}, {name: 'Desc', id:2 }];
+
   }
 
 }

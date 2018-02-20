@@ -1,0 +1,11 @@
+<pagination 
+  [totalItems]="totalRecords" 
+  [(ngModel)]="currentPage" 
+  [maxSize]="5" 
+  class="pagination-md" 
+  [boundaryLinks]="false"
+  [rotate]="false" 
+  (pageChanged)="onPageChange($event.page)" 
+  [itemsPerPage]="pageSize" 
+  [align]="false">
+</pagination>
