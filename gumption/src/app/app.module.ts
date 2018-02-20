@@ -9,12 +9,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HeaderComponent } from './header/header.component';
 import { SearchboxComponent } from './header/searchbox/searchbox.component';
+import { FacetsComponent } from './facets/facets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchboxComponent
+    SearchboxComponent,
+    FacetsComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
