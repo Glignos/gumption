@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { NgSelectModule } from '@ng-select/ng-select';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -17,6 +18,12 @@ import { FacetComponent } from './facets/facet/facet.component';
 import { CountComponent } from './count/count.component';
 import { SortComponent } from './sort/sort.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { UrlResolver } from './shared/services/url-resolver.service';
+import { ResultsComponent } from './results/results.component';
+import { ResultComponent } from './results/result/result.component';
+import { QueryService } from './shared/services/query.service';
+
+const appRoutes: Routes = [{ path: '', component: ResultsComponent, resolve: { query: UrlResolver } }];
 
 @NgModule({
   declarations: [
@@ -27,7 +34,9 @@ import { PaginationComponent } from './pagination/pagination.component';
     FacetComponent,
     CountComponent,
     SortComponent,
-    PaginationComponent
+    PaginationComponent,
+    ResultsComponent,
+    ResultComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
@@ -36,8 +45,12 @@ import { PaginationComponent } from './pagination/pagination.component';
     HttpModule,
     NgSelectModule,
     PaginationModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UrlResolver,
+    QueryService,
+    UrlResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
