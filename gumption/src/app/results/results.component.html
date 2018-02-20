@@ -8,15 +8,13 @@
         <app-pagination></app-pagination>
         <app-sort></app-sort>
       </div>
+      <ul>
+      <li *ngFor="let result of records" class="list-group list-group-item" >
+        <app-result [result]="result"></app-result>
+      </li>
+    </ul>
     </div>
-    <li *ngFor="let result of records" class="list-group list-group-item" >
-      <app-result [result]="result"></app-result>
-    </li>
+
 </div>
 <div>
-  <li *ngFor="let record of records;" class="list-group list-group-item">
-    <app-result [result]="record"></app-result>
-    </li>
 </div>
-
-
