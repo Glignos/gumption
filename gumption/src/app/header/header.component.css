@@ -1,7 +1,20 @@
 .navbar {
     background-color: #ff0069;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
     color: white;
+}
+
+.signin-area {
+  position: absolute;
+  right: 0px;
+}
+
+.navbar button {
+  margin-right: 10px;
+  background-color: white;
+  color: #ff0069;
 }
