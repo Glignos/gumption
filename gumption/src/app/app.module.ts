@@ -20,10 +20,11 @@ import { SortComponent } from './results/sort/sort.component';
 import { PaginationComponent } from './results/pagination/pagination.component';
 import { UrlResolver } from './shared/services/url-resolver.service';
 import { ResultsComponent } from './results/results.component';
-import { ResultComponent } from './results/result/result.component';
+import { ResultViewComponent } from './results/result-view/result-view.component';
 import { QueryService } from './shared/services/query.service';
 
-const appRoutes: Routes = [{ path: '', component: ResultsComponent, resolve: { query: UrlResolver } }];
+const appRoutes: Routes = [{ path: '', runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+ component: ResultsComponent, resolve: { query: UrlResolver } }];
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ const appRoutes: Routes = [{ path: '', component: ResultsComponent, resolve: { q
     SortComponent,
     PaginationComponent,
     ResultsComponent,
-    ResultComponent
+    ResultViewComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
