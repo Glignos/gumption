@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Facet } from '../../models/facet';
+import { Facet } from '../../../models/facet';
 
 @Component({
   selector: 'app-facet',
