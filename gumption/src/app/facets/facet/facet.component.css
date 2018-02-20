@@ -8,5 +8,13 @@ li {
     width: 100%;
 }
 
+label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .badge {
+  position: absolute;
+  right: 10px;
 }
