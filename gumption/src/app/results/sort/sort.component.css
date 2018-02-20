@@ -1,0 +1,12 @@
+.sort-container {
+  display: flex;
+  align-items: center;
+}
+
+span{
+  margin-right: 10px;
+}
+
+ng-select {
+  margin: 0 5px;
+}

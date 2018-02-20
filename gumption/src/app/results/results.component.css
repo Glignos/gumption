@@ -1,3 +1,8 @@
-.whatever {
+.controls-container {
   display: flex;
+  justify-content: space-between;
+}
+
+app-pagination {
+  margin: -25px 10px;
 }

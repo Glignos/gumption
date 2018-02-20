@@ -17,4 +17,9 @@ label {
 .badge {
   position: absolute;
   right: 10px;
+  background-color: #FF9800;
+}
+
+h4 {
+  color: #ff0069;
 }

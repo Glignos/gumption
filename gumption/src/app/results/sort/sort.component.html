@@ -1,19 +1,15 @@
-<div class="row">
-  <div class="col-md-3">Sort by:</div>
-  <div class="col-md-5">
+<div class="sort-container">
+    <span>Sort By:</span>
     <ng-select [items]="sortTypes"
       bindLabel="name"
       bindValue="id"
       placeholder="Type"
       [(ngModel)]="selectedSortType">
     </ng-select>
-  </div>
-  <div class="col-md-4">
-      <ng-select [items]="sortOrder"
+    <ng-select [items]="sortOrder"
       bindLabel="name"
       bindValue="id"
       placeholder="Order"
       [(ngModel)]="selectedSortOrder">
     </ng-select>
-  </div>
 </div>

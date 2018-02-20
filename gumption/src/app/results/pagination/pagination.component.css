@@ -1,0 +1,6 @@
+/deep/ .page-link { color: #ff0069 !important; }
+/deep/ .pagination > .active > a {
+  background-color: #ff9800 !important;
+  border-color: #ff9800 !important;
+  color: white !important;
+}
