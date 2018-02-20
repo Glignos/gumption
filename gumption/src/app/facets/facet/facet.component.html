@@ -1,0 +1,12 @@
+<div>
+  <h4>{{facet.title}}</h4>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of facet.items">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="" disabled>
+            {{item.category}}
+            <span class="badge">{{item.number}}</span>
+        </label>
+    </li>
+  </ul>
+</div>

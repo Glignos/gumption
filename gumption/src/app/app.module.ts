@@ -10,13 +10,15 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HeaderComponent } from './header/header.component';
 import { SearchboxComponent } from './header/searchbox/searchbox.component';
 import { FacetsComponent } from './facets/facets.component';
+import { FacetComponent } from './facets/facet/facet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchboxComponent,
-    FacetsComponent
+    FacetsComponent,
+    FacetComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
