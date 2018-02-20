@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
@@ -10,18 +11,22 @@ export class PaginationComponent implements OnInit {
 
   totalRecords: number;
   currentPage: number;
-  pageSize: number;
+  pageSize = 10;
 
-  totalResults: number;
   constructor(
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
+      this.currentPage = this.route.queryParams['page'] || 1;
       this.route.data
       .map(data => data.query)
       .subscribe(json => {
-        this.totalResults = (json['hits']['total']);
+        this.totalRecords = (json['hits']['total']);
       });
   }
 
+  onPageChange(newPage: number) {
+    this.router.navigateByUrl(`/?page=${newPage}&sort=${this.route.queryParams['sort']}&order=${this.route.queryParams['order']}`);
+  }
 }

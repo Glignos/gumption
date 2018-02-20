@@ -4,10 +4,10 @@ import {Result} from '../../models/result';
 
 @Component({
   selector: 'app-result',
-  templateUrl: './result.component.html',
-  styleUrls: ['./result.component.css']
+  templateUrl: './result-view.component.html',
+  styleUrls: ['./result-view.component.css']
 })
-export class ResultComponent implements OnInit {
+export class ResultViewComponent implements OnInit {
 
   @Input() result: Result;
 

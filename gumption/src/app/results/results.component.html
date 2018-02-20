@@ -10,5 +10,10 @@
       </div>
     </div>
 </div>
+<div>
+  <li *ngFor="let record of records;" class="list-group list-group-item">
+    <app-result [result]="record"></app-result>
+    </li>
+</div>
 
-  
+

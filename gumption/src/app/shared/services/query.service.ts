@@ -12,8 +12,7 @@ export class QueryService {
   constructor(private http: Http) {}
   fetchResults(query: Query): Observable<any> { // fixme find out api result
     return this.http
-    // .get(`${this.url}/search?q=${query.queryString}&page=${query.page}&sort=${query.sortType}`)
-    .get(`${this.url}`)
+    .get(`${this.url}/?q=${query.queryString}&page=${query.page}&sort=${query.sortBy}`)
     .map(res => res.json());
   }
 }
