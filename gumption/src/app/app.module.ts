@@ -15,9 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { SearchboxComponent } from './header/searchbox/searchbox.component';
 import { FacetsComponent } from './facets/facets.component';
 import { FacetComponent } from './facets/facet/facet.component';
-import { CountComponent } from './count/count.component';
-import { SortComponent } from './sort/sort.component';
-import { PaginationComponent } from './pagination/pagination.component';
+import { CountComponent } from './results/count/count.component';
+import { SortComponent } from './results/sort/sort.component';
+import { PaginationComponent } from './results/pagination/pagination.component';
 import { UrlResolver } from './shared/services/url-resolver.service';
 import { ResultsComponent } from './results/results.component';
 import { ResultComponent } from './results/result/result.component';
@@ -50,7 +50,8 @@ const appRoutes: Routes = [{ path: '', component: ResultsComponent, resolve: { q
   providers: [
     UrlResolver,
     QueryService,
-    UrlResolver],
+    UrlResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

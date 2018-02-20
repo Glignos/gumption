@@ -9,13 +9,14 @@ import { Result } from '../models/result';
 })
 export class ResultsComponent implements OnInit {
   records: Result[];
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
       this.route.data
       .map(data => data.query)
-      .subscribe((json) => {
+      .subscribe(json => {
+        this.records = (json['hits']['total']);
       });
   }
 

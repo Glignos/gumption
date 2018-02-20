@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Facet} from '../models/facet';
+import { Facet } from '../models/facet';
 
 @Component({
   selector: 'app-facets',
@@ -9,7 +9,7 @@ import {Facet} from '../models/facet';
 })
 export class FacetsComponent implements OnInit {
 
-  facets: Facet [];
+  facets: Facet[];
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class FacetsComponent implements OnInit {
     this.facets = [
       {
         title: 'Document type',
-        items: [ {
+        items: [{
           category: 'Article',
           number: 4
         },
@@ -33,7 +33,7 @@ export class FacetsComponent implements OnInit {
       },
       {
         title: 'Identifier',
-        items: [ {
+        items: [{
           category: 'doi',
           number: 4
         },
@@ -47,7 +47,7 @@ export class FacetsComponent implements OnInit {
         }
         ]
       }
-    ]
+    ];
   }
 
 }
