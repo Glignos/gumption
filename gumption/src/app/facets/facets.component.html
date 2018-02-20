@@ -1,3 +1,5 @@
-<p>
-  facets works!
-</p>
+<div class="facets">
+  <div *ngFor="let facet of facets">
+      <app-facet [facet]="facet" ></app-facet>
+  </div>
+</div>
